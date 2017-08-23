@@ -16,6 +16,6 @@ RUN pip install scipy==0.17.0
 
 
 
-#CMD ["python", "/var/app/dcopy.py","20480","1000"]
+CMD ["python", "/var/app/dcopy.py","20480","10"]
 
-CMD ["python", "/var/app/dcopy.py","-e cache-size='20480'","-e iteration='1000'"]
+#CMD ["python", "/var/app/dcopy.py","-e cache-size='20480'","-e iteration='1000'"]
