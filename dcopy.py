@@ -3,12 +3,12 @@ import scipy.linalg.blas as blas
 import numpy as np
 import os 
 
+#print("cache_size:{}".format(os.getenv('cache_size')))
+#c_size = int(os.getenv('cache_size','20480'))
+#t = int(os.getenv('iteration','10'))
 
-c_size = int(os.getenv('cache_size','20480'))
-t = int(os.getenv('iteration','1000'))
-
-#c_size = int(sys.argv[1])   #cache size
-#t = int(sys.argv[2])        #number of loops
+c_size = int(sys.argv[1])   #cache size
+t = int(sys.argv[2])        #number of loops
 
 
 size = c_size*1000/8
