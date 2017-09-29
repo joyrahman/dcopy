@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dcopy
+spec:
+  parallelism: 6
+  completions: 6
+  template:
+    metadata:
+      name: command-demo-pod
+    spec:
+      containers:
+      - name: command-demo-container
+        image: joyrahman/dcopy:v3
+        command: ["python"]
+        args: ["/var/app/dcopy.py", "204800","500"]
+      nodeSelector:
+        color: blue
+      restartPolicy: Never
